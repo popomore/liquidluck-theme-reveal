@@ -5,9 +5,9 @@
   },
 
   "config": {
-    "source": "ppt",
-    "output": "_site",
-    "static": "_site/static",
+    "source": "content",
+    "output": "ppt",
+    "static": "ppt/static",
     "static_prefix": "/static/",
     "permalink": "{{date.year}}/{{date.month}}/{{filename}}.html",
     "relative_url": false,
