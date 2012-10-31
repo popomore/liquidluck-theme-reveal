@@ -7,7 +7,7 @@
     <title>{% block title %}{{site.name}}{% endblock %}</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <link rel="stylesheet" href="{{static_url('reveal/css/main.css')}}">
+    <link rel="stylesheet" href="{{static_url('reveal/css/reveal.css')}}">
     <link rel="stylesheet" href="{{static_url('reveal/css/theme/default.css')}}" id="theme">
     <!--[if lt IE 9]>
         <script src="/static/reveal/lib/js/html5shiv.js"></script>
@@ -35,6 +35,7 @@ Reveal.initialize({
         { src: '{{static_url('reveal/lib/js/highlight.js')}}', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
         { src: '{{static_url('reveal/lib/js/classList.js')}}', condition: function() { return !document.body.classList; } },
         { src: '{{static_url('reveal/plugin/speakernotes/client.js')}}', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+        { src: '{{static_url('reveal/plugin/zoom-js/zoom.js')}}', async: true, condition: function() { return !!document.body.classList; } },
     ]
 });
 </script>
