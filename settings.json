@@ -1,0 +1,47 @@
+{
+  "site": {
+    "name": "example for reveal theme",
+    "url": "http://"
+  },
+
+  "config": {
+    "source": "ppt",
+    "output": "_site",
+    "static": "_site/static",
+    "static_prefix": "/static/",
+    "permalink": "{{date.year}}/{{date.month}}/{{filename}}.html",
+    "relative_url": false,
+    "perpage": 30,
+    "feedcount": 20,
+    "timezone": "+08:00"
+  },
+
+  "author": {
+    "default": "popomore",
+    "vars": {}
+  },
+
+  "reader": {
+    "active": [
+      "liquidluck.readers.markdown.MarkdownReader"
+    ],
+    "vars": {}
+  },
+
+  "writer": {
+    "active": [
+      "liquidluck.writers.core.PostWriter",
+      "liquidluck.writers.core.FileWriter",
+      "liquidluck.writers.core.StaticWriter"
+    ],
+    "vars": {
+	  "archive_output": "archive/index.html"
+    }
+  },
+
+  "theme": {
+    "name": "reveal",
+    "vars": {
+    }
+  }
+}
