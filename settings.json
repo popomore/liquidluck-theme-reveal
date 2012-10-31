@@ -8,7 +8,7 @@
     "source": "content",
     "output": "ppt",
     "static": "ppt/static",
-    "static_prefix": "/liquidluck-theme-reveal/static/",
+    "static_prefix": "/liquidluck-theme-reveal/ppt/static/",
     "permalink": "{{date.year}}/{{date.month}}/{{filename}}.html",
     "relative_url": false,
     "perpage": 30,
