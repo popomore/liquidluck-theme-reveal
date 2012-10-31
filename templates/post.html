@@ -7,8 +7,8 @@
     <title>{% block title %}{{site.name}}{% endblock %}</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <link rel="stylesheet" href="/static/reveal/css/reveal.css">
-    <link rel="stylesheet" href="/static/reveal/css/theme/{{theme.reveal.style}}.css" id="theme">
+    <link rel="stylesheet" href="{{static_url('reveal/css/main.css')}}">
+    <link rel="stylesheet" href="{{static_url('reveal/css/theme/default.css')}}" id="theme">
     <!--[if lt IE 9]>
         <script src="/static/reveal/lib/js/html5shiv.js"></script>
     <![endif]-->
@@ -17,8 +17,8 @@
 <div class="reveal">
     {{post.content | reveal}}
 </div>
-<script src="/static/reveal/lib/js/head.min.js"></script>
-<script src="/static/reveal/js/reveal.min.js"></script>
+<script src="{{static_url('reveal/lib/js/head.min.js')}}"></script>
+<script src="{{static_url('reveal/js/reveal.min.js')}}"></script>
 <script>
 // Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
@@ -32,12 +32,9 @@ Reveal.initialize({
 
     // Optional libraries used to extend on reveal.js
     dependencies: [
-        { src: '/static/reveal/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
-        { src: '/static/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-        { src: '/static/reveal/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: '/static/reveal/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: '/static/reveal/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
-        { src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+        { src: '{{static_url('reveal/lib/js/highlight.js')}}', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+        { src: '{{static_url('reveal/lib/js/classList.js')}}', condition: function() { return !document.body.classList; } },
+        { src: '{{static_url('reveal/plugin/speakernotes/client.js')}}', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
     ]
 });
 </script>
