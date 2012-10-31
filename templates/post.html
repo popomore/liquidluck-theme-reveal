@@ -34,8 +34,8 @@ Reveal.initialize({
     dependencies: [
         { src: '{{static_url('reveal/lib/js/classList.js')}}', condition: function() { return !document.body.classList; } },
         { src: '{{static_url('reveal/plugin/highlight/highlight.js')}}', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
-        { src: '{{static_url('reveal/plugin/notes/notes.js')}}', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
         { src: '{{static_url('reveal/plugin/zoom-js/zoom.js')}}', async: true, condition: function() { return !!document.body.classList; } },
+        { src: '{{static_url('reveal/plugin/notes/notes.js')}}', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
     ]
 });
 </script>
